@@ -8,3 +8,6 @@ Objectifs prochains sur le projet :
 - Faire les différentes pages (voir nav du header, et footer)
 - Faire les media queries
 - Changer les sliders de la partie photos, car les encres ne sont pas user friendly (faire ça en JS.)
+- Bouton post sur la gauche
+- Responsive sur la gauche, faire disparaitre le texte et laisser les icones.
+- Faire descendre le "connexion" en bas.
