@@ -407,10 +407,11 @@ h2{
 }
 
 .slider-nav a {
+  color: #AADC58;
   font-size: 19px;
-  background-color: black;
+  background-color: rgb(0, 0, 0, 0.5);
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid #AADC58;
   padding: 5px;
   height: 35px;
   width: 35px;
