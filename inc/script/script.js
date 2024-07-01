@@ -23,42 +23,28 @@ const sliderArrTwo = [
 let currentIndexOne = 0;
 let currentIndexTwo = 0;
 
-// First slider left and right buttons
-const imageChangerOneLeft = () => {
-    currentIndexOne--;
-    if (currentIndexOne < 0) {
-        currentIndexOne = sliderArrOne.length - 1;
+// Generic function to change the image
+const changeImage = (currentIndex, sliderArr, slide, direction) => {
+    currentIndex += direction;
+    if (currentIndex < 0) {
+        currentIndex = sliderArr.length - 1;
+    } else if (currentIndex >= sliderArr.length) {
+        currentIndex = 0;
     }
-    slideOne.src = sliderArrOne[currentIndexOne];
-}
-
-const imageChangerOneRight = () => {
-    currentIndexOne++;
-    if (currentIndexOne >= sliderArrOne.length) {
-        currentIndexOne = 0;
-    }
-    slideOne.src = sliderArrOne[currentIndexOne];
-};
-
-// Second slider left and right buttons
-const imageChangerTwoLeft = () => {
-    currentIndexTwo--;
-    if (currentIndexTwo < 0) {
-        currentIndexTwo = sliderArrTwo.length -1;
-    }
-    slideTwo.src = sliderArrTwo[currentIndexTwo];
-}
-
-const imageChangerTwoRight = () => {
-    currentIndexTwo++;
-    if (currentIndexTwo >= sliderArrTwo.length) {
-        currentIndexTwo = 0;
-    }
-    slideTwo.src = sliderArrTwo[currentIndexTwo];
+    slide.src = sliderArr[currentIndex];
+    return currentIndex;
 };
 
 // Event listeners for the sliders buttons
-arrowLeftOne.addEventListener("click", imageChangerOneLeft);
-arrowRightOne.addEventListener("click", imageChangerOneRight);
-arrowLeftTwo.addEventListener("click", imageChangerTwoLeft);
-arrowRightTwo.addEventListener("click", imageChangerTwoRight);
+arrowLeftOne.addEventListener("click", () => {
+    currentIndexOne = changeImage(currentIndexOne, sliderArrOne, slideOne, -1);
+});
+arrowRightOne.addEventListener("click", () => {
+    currentIndexOne = changeImage(currentIndexOne, sliderArrOne, slideOne, 1);
+});
+arrowLeftTwo.addEventListener("click", () => {
+    currentIndexTwo = changeImage(currentIndexTwo, sliderArrTwo, slideTwo, -1);
+});
+arrowRightTwo.addEventListener("click", () => {
+    currentIndexTwo = changeImage(currentIndexTwo, sliderArrTwo, slideTwo, 1);
+});
