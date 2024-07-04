@@ -5,7 +5,6 @@ Il s'agit d'un petit projet personnel que je fais pour m'entrainer et voir si je
 
 Objectifs prochains sur le projet : 
 - Créer les espaces commentaires
-- Faire les différentes pages (voir nav du header, et footer)
 - Faire les media queries
 - Bouton post sur la gauche
 - Responsive sur la gauche, faire disparaitre le texte et laisser les icones.
